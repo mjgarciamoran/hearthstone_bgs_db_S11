@@ -1,31 +1,33 @@
-# Hearthstone Battlegrounds Leaderboard Database - Season 11 - 08/2025
+# Hearthstone Battlegrounds Leaderboard Database — Season 11 (08/2025)
 
 Hearthstone is an online card game developed by Blizzard Entertainment.  
-Data related to player rating is publicly published in public leaderboards on their website. There's an API to access it.
-Players and their rankings are distributed between two gamemodes and three regions.
-Data is fetched every 6 minutes for each combination of gamemode and region.
+Player rating data is published in on Blizzard’s official website and is also available through their API.  
+Players and their rankings are distributed across **two game modes** (battlegrounds, battlegrounds duo) and **three regions** (EU, US, AP).  
 
-In each database file there's a table for each day, where each row represents a different player and each row a different fetching instance (i.e. every 6 minutes).
+This project fetches leaderboard data **every 6 minutes** for each game mode/region combination, and stores it in daily database files.
 
-Early days of the database are missing due to my own incompetence.
+Each database file contains:
+- One table per day.
+- Player data structured in rows, where each column represents a specific fetch instance (i.e., every 6 minutes).
 
 ## Previews
 
-Here are some previews to showcase the information inside the dataset. All of them for the "US" region, "bgs" gamemode leaderboard. They show data for the 5 top players for the first 7 days.  
+Below are some previews showcasing the dataset structure.  
+All examples are for the **"US" region** and **"bgs" game mode** leaderboards, showing the top 5 players during the first 7 days.  
 
 ### Raw csv
-This is taken from the first day 250824.  
+Taken from the first day 250824.  
 ![Raw csv](./previews/pics/inputdataexample.png)  
-[View the preview](./previews/USbgs_inputdataexample.csv)  
+[Preview file](./previews/USbgs_inputdataexample.csv)  
 
 ### Daily record
 ![Daily record](./previews/pics/recordpreview.png)  
-[View the preview](./previews/USbgs_recordpreview.csv)  
+[Preview file](./previews/USbgs_recordpreview.csv)  
 
 ### Daily total
 ![Daily total](./previews/pics/sumpreview.png)  
-[View the preview](./previews/USbgs_sumpreview.csv)  
+[Preview file](./previews/USbgs_sumpreview.csv)  
 
 ## Considerations
-- Early days of the database are missing due to my own incompetence.
-- Season 11 corresponds to season 16 internally in Hearthstone's API.
+- The first few days of the database are missing due to setup issues. 
+- Battlegrounds Season 11 corresponds to Season 16 internally in the official API.
