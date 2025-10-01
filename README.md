@@ -1,6 +1,17 @@
 # Hearthstone Battlegrounds Leaderboard Database — Season 11 (08/2025)
 
-Hearthstone is an online card game developed by Blizzard Entertainment.  
+This repository contains the results of my data-fetching project focused on Hearthstone Battlegrounds leaderboards. The motivation behind this project is to collect high-frequency time series data.
+
+---
+
+## What is Hearthstone?
+
+Hearthstone is an online card game developed by Blizzard Entertainment.
+
+---
+
+## Data source
+
 Player rating data is published in on Blizzard’s official website and is also available through their API.  
 Players and their rankings are distributed across **two game modes** (battlegrounds, battlegrounds duo) and **three regions** (EU, US, AP).  
 
@@ -9,6 +20,8 @@ This project fetches leaderboard data **every 6 minutes** for each game mode/reg
 Each database file contains:
 - One table per day.
 - Player data structured in rows, where each column represents a specific fetch instance (i.e., every 6 minutes).
+
+---
 
 ## Previews
 
@@ -28,6 +41,10 @@ Taken from the first day 250824.
 ![Daily total](./previews/pics/sumpreview.png)  
 [Preview file](./previews/USbgs_sumpreview.csv)  
 
+---
+
 ## Considerations
-- The first few days of the database are missing due to setup issues. 
-- Battlegrounds Season 11 corresponds to Season 16 internally in the official API.
+- The first few days of the season are missing due to setup issues. 
+- Battlegrounds Season 11 corresponds to Season 16 internally in the official API, hence the naming of the files.
+
+---
