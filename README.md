@@ -6,14 +6,16 @@ This repository contains the results of my data-fetching project focused on Hear
 
 ## What is Hearthstone?
 
-Hearthstone is an online card game developed by Blizzard Entertainment.
+Hearthstone is an online card game by Blizzard Entertainment featuring several game modes with independent ranking systems.
+This database focuses on the Battlegrounds and Battlegrounds Duo modes, both of which use an MMR (Matchmaking Rating) system to determine leaderboard positions across three regions.
+The leaderboard includes all players with at least 8000 MMR.
 
 ---
 
 ## Data source
 
 Player rating data is published in on Blizzard’s official website and is also available through their API.  
-Players and their rankings are distributed across **two game modes** (battlegrounds, battlegrounds duo) and **three regions** (EU, US, AP).  
+Players and their rankings are distributed across **two game modes** (Battlegrounds, Battlegrounds Duo) and **three regions** (EU, US, AP).  
 
 This project fetches leaderboard data **every 6 minutes** for each game mode/region combination, and stores it in daily database files.
 
